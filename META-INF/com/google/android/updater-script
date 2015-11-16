@@ -1,0 +1,45 @@
+set_progress(0.1);
+
+ui_print("###########################################");
+ui_print("                            ");
+ui_print("       Tweaks by Franco ");
+ui_print("                            ");
+ui_print("###########################################");
+
+run_program("/sbin/busybox", "mount", "/data");
+run_program("/sbin/busybox", "mount", "/system");
+
+	# <<< init.d >>>
+	set_progress(0.2);
+	ui_print(" ");
+	ui_print("Installing init.d scripts...");
+	package_extract_dir("system", "/system");
+	set_perm_recursive(0, 2000, 0755, 0755, "/system/etc/init.d");
+	set_perm(0, 0, 0755, "/system/etc/init.d");
+	ui_print("Done");
+
+	# <<< Scripts >>>
+	set_progress(0.4);
+	ui_print(" ");
+	ui_print("Installing scripts...");
+	set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin");
+	set_perm(0, 0, 0755, "/system/xbin");
+	ui_print("Done");
+	
+	package_extract_file("system/addon.d/99-franco.sh", "/system/addon.d/99-franco.sh");
+	set_perm(0, 0, 0755, "/system/addon.d/99-franco.sh");
+	set_perm(0, 0, 0755, "/system/app/Toggle2G/Toggle2G.apk");
+
+set_progress(0.6);
+run_program("/sbin/busybox", "umount", "/system");
+run_program("/sbin/busybox", "umount", "/data");
+set_progress(1.0);
+
+ui_print(" ");
+ui_print("###########################################");
+ui_print(" ");
+ui_print("Installation done Franco!");
+ui_print(" ");
+ui_print("Reboot your device");
+ui_print(" ");
+ui_print("###########################################");

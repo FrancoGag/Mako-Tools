@@ -1,0 +1,24 @@
+#!system/bin/sh
+
+# <<< Speaker >>>
+# (Voise Profile)
+echo 2 > /sys/bus/i2c/devices/0-0058/comp_rate
+echo 6 > /sys/bus/i2c/devices/0-0058/fixed_gain
+echo 2 > /sys/bus/i2c/devices/0-0058/ATK_time
+echo 11 > /sys/bus/i2c/devices/0-0058/REL_time
+echo 0 > /sys/bus/i2c/devices/0-0058/Hold_time
+echo 0 > /sys/bus/i2c/devices/0-0058/out_lim
+echo 28 > /sys/bus/i2c/devices/0-0058/Output_limit_level
+echo 12 > /sys/bus/i2c/devices/0-0058/AGC_Max_Gain
+echo 1 > /sys/bus/i2c/devices/0-0058/Noise_Gate_Threshold
+
+# <<< Sound Control >>>
+# (quality profile)
+echo 0 > /sys/kernel/sound_control_3/gpl_sound_control_locked
+echo 254 254  3 > /sys/kernel/sound_control_3/gpl_headphone_gain
+echo 1 1  253 > /sys/kernel/sound_control_3/gpl_headphone_pa_gain
+echo 254 254  3 > /sys/kernel/sound_control_3/gpl_speaker_gain
+echo 254 254  3 > /sys/kernel/sound_control_3/gpl_headphone_gain
+echo 0 255 > /sys/kernel/sound_control_3/gpl_mic_gain
+echo 0 255 > /sys/kernel/sound_control_3/gpl_cam_mic_gain
+echo 0 > /sys/kernel/sound_control_3/gpl_sound_control_locked

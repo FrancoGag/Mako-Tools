@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+# defrag database files
+for i in \
+`busybox find / -type f -iname "*.db"`;
+do \
+	/system/xbin/sqlite3 $i 'VACUUM;';
+	/system/xbin/sqlite3 $i 'REINDEX;';
+done;

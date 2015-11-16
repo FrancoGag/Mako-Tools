@@ -1,0 +1,20 @@
+# Compiled source #
+###################
+*.so
+*.apk
+*.zip
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# folders #
+######################
+system/vendor/
+system/app/
