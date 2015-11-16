@@ -1,9 +1,9 @@
 set_progress(0.1);
 
 ui_print("###########################################");
-ui_print("                            ");
-ui_print("       Tweaks by Franco ");
-ui_print("                            ");
+ui_print("                               ");
+ui_print("          Mako Tools by Franco ");
+ui_print("                               ");
 ui_print("###########################################");
 
 run_program("/sbin/busybox", "mount", "/data");
