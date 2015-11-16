@@ -7,8 +7,8 @@ find /sdcard/Pictures/Screenshots -mtime +30 -type f | xargs -0 rm -f
 find /sdcard/WhatsApp/Media -mtime +60 -type f | xargs -0 rm -f
 rm -f /sdcard/WhatsApp/Profile\ Pictures/*.jpg
 rm -fr UnityAdsVideoCache
-find /sdcard/Download/Apps/ -type f -iname google | xargs -0 rm -f
-find /sdcard/Download/Apps/ -type f -iname whatsapp | xargs -0 rm -f
+find /sdcard/Download/Apps/ -type f -iname *google* | xargs -0 rm -f
+find /sdcard/Download/Apps/ -type f -iname *whatsapp* | xargs -0 rm -f
 
 TWEAKS="/sdcard/Download/Zips/My-Tweaks*"
 GAPPS="/sdcard/Download/Zips/BaNkS-Dynamic-*"
