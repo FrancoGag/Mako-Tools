@@ -10,12 +10,12 @@ rm -fr UnityAdsVideoCache
 find ./Download/Apps/ -type f -iname *google* | xargs -0 rm -f
 find ./Download/Apps/ -type f -iname *whatsapp* | xargs -0 rm -f
 
-TWEAKS="./Download/Zips/My-Tweaks*"
+MAKOTOOLS="./Download/Zips/Mako-Tools*"
 GAPPS="./Download/Zips/BaNkS-Dynamic-*"
 ROM="./Download/Zips/chroma_mako-*"
 KERNEL="./Download/Zips/hC-*"
-if [ "`echo $TWEAKS`" != "$TWEAKS" ]; then
-	ls $TWEAKS | sort -r | sed -n '1!p' | xargs rm -f
+if [ "`echo $MAKOTOOLS`" != "$MAKOTOOLS" ]; then
+	ls $MAKOTOOLS | sort -r | sed -n '1!p' | xargs rm -f
 fi
 if [ "`echo $GAPPS`" != "$GAPPS" ]; then
 	ls $GAPPS | sort -r | sed -n '1!p' | xargs rm -f
