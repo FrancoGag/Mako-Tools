@@ -28,7 +28,7 @@ rm -rf /sdcard/LOST.DIR
 
 # <<< Under Volt >>>
 echo 94500 725000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
-echo 189000 750000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 189000 725000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
 echo 243000 750000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
 echo 384000 750000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
 echo 432000 775000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
