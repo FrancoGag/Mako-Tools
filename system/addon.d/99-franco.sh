@@ -7,7 +7,6 @@
 list_files() {
 cat <<EOF
 priv-app/com.asksven.betterbatterystats_xdaedition.apk
-addon.d/99-franco.sh
 app/Toggle2G/Toggle2G.apk
 etc/hosts
 etc/init.d/01kernel
