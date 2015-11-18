@@ -1,19 +1,19 @@
 #!/system/bin/sh
 
-cd /sdcard/
+cd /storage/emulated/0
 #-----------------Limpieza------------------
 #Borrar Archivos Viejos
-find /sdcard/Pictures/Screenshots -mtime +30 -type f | xargs -0 rm -f
-find /sdcard/WhatsApp/Media -mtime +60 -type f | xargs -0 rm -f
-rm -f /sdcard/WhatsApp/Profile\ Pictures/*.jpg
+find ./Pictures/Screenshots -mtime +30 -type f | xargs -0 rm -f
+find ./WhatsApp/Media -mtime +60 -type f | xargs -0 rm -f
+rm -f ./WhatsApp/Profile\ Pictures/*.jpg
 rm -fr UnityAdsVideoCache
-find /sdcard/Download/Apps/ -type f -iname *google* | xargs -0 rm -f
-find /sdcard/Download/Apps/ -type f -iname *whatsapp* | xargs -0 rm -f
+find ./Download/Apps/ -type f -iname *google* | xargs -0 rm -f
+find ./Download/Apps/ -type f -iname *whatsapp* | xargs -0 rm -f
 
-TWEAKS="/sdcard/Download/Zips/My-Tweaks*"
-GAPPS="/sdcard/Download/Zips/BaNkS-Dynamic-*"
-ROM="/sdcard/Download/Zips/chroma_mako-*"
-KERNEL="/sdcard/Download/Zips/hC-*"
+TWEAKS="./Download/Zips/My-Tweaks*"
+GAPPS="./Download/Zips/BaNkS-Dynamic-*"
+ROM="./Download/Zips/chroma_mako-*"
+KERNEL="./Download/Zips/hC-*"
 if [ "`echo $TWEAKS`" != "$TWEAKS" ]; then
 	ls $TWEAKS | sort -r | sed -n '1!p' | xargs rm -f
 fi
@@ -28,41 +28,41 @@ if [ "`echo $KERNEL`" != "$KERNEL" ]; then
 fi
 
 # Limpiar Downloads
-NFILES=$(find /sdcard/Download/ -maxdepth 1 -type f | wc -l)
+NFILES=$(find ./Download/ -maxdepth 1 -type f | wc -l)
 if [ $NFILES != "0" ]; then
 
-	mkdir -p /sdcard/Download/Zips
-	if [ "`echo /sdcard/Download/*.zip`" != "/sdcard/Download/*.zip" ]; then
-		mv /sdcard/Download/*.zip /sdcard/Download/Zips/
+	mkdir -p ./Download/Zips
+	if [ "`echo ./Download/*.zip`" != "./Download/*.zip" ]; then
+		mv ./Download/*.zip ./Download/Zips/
 	fi
 	
-	mkdir -p /sdcard/Download/Apps
-	if [ "`echo /sdcard/Download/*.apk`" != "/sdcard/Download/*.apk" ]; then
-		mv /sdcard/Download/*.apk /sdcard/Download/Apps/
+	mkdir -p ./Download/Apps
+	if [ "`echo ./Download/*.apk`" != "./Download/*.apk" ]; then
+		mv ./Download/*.apk ./Download/Apps/
 	fi
 	
-	mkdir -p /sdcard/Documents/
-	if [ "`echo /sdcard/Download/*.doc /sdcard/Download/*.docx`" != "/sdcard/Download/*.doc /sdcard/Download/*.docx" ]; then
-		mv /sdcard/Download/*.doc* /sdcard/Documents/
+	mkdir -p ./Documents/
+	if [ "`echo ./Download/*.doc ./Download/*.docx`" != "./Download/*.doc ./Download/*.docx" ]; then
+		mv ./Download/*.doc* ./Documents/
 	fi
-	if [ "`echo /sdcard/Download/*.xls /sdcard/Download/*.xlsx`" != "/sdcard/Download/*.xls /sdcard/Download/*.xlsx" ]; then
-		mv /sdcard/Download/*.xls* /sdcard/Documents/
+	if [ "`echo ./Download/*.xls ./Download/*.xlsx`" != "./Download/*.xls ./Download/*.xlsx" ]; then
+		mv ./Download/*.xls* ./Documents/
 	fi
-	if [ "`echo /sdcard/Download/*.ppt /sdcard/Download/*.pptx`" != "/sdcard/Download/*.ppt /sdcard/Download/*.pptx" ]; then
-		mv /sdcard/Download/*.ppt* /sdcard/Documents/
+	if [ "`echo ./Download/*.ppt ./Download/*.pptx`" != "./Download/*.ppt ./Download/*.pptx" ]; then
+		mv ./Download/*.ppt* ./Documents/
 	fi
-	if [ "`echo /sdcard/Download/*.pdf`" != "/sdcard/Download/*.pdf" ]; then
-		mv /sdcard/Download/*.pdf /sdcard/Documents/
+	if [ "`echo ./Download/*.pdf`" != "./Download/*.pdf" ]; then
+		mv ./Download/*.pdf ./Documents/
 	fi
 	
-	mkdir -p /sdcard/Pictures/Downloaded\ Pictures
-	if [ "`echo /sdcard/Download/*.jpg`" != "/sdcard/Download/*.jpg" ]; then
-		mv /sdcard/Download/*.jpg /sdcard/Pictures/Downloaded\ Pictures
+	mkdir -p ./Pictures/Downloaded\ Pictures
+	if [ "`echo ./Download/*.jpg`" != "./Download/*.jpg" ]; then
+		mv ./Download/*.jpg ./Pictures/Downloaded\ Pictures
 	fi
-	if [ "`echo /sdcard/Download/*.png`" != "/sdcard/Download/*.png" ]; then
-		mv /sdcard/Download/*.png /sdcard/Pictures/Downloaded\ Pictures
+	if [ "`echo ./Download/*.png`" != "./Download/*.png" ]; then
+		mv ./Download/*.png ./Pictures/Downloaded\ Pictures
 	fi
-	if [ "`echo /sdcard/Download/*.gif`" != "/sdcard/Download/*.gif" ]; then
-		mv /sdcard/Download/*.gif /sdcard/Pictures/Downloaded\ Pictures
+	if [ "`echo ./Download/*.gif`" != "./Download/*.gif" ]; then
+		mv ./Download/*.gif ./Pictures/Downloaded\ Pictures
 	fi
 fi
