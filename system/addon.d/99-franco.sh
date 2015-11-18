@@ -62,5 +62,7 @@ case "$1" in
    sed -i '/wifi.supplicant_scan_interval/c\wifi.supplicant_scan_interval=120' /system/build.prop
    sed -i '/ro.config.vc_music_vol_steps/c\ro.config.vc_music_vol_steps=15' /system/build.prop
    rm -rf /system/app/Stk/
+   rm -rf /system/app/Calculator/
+   rm -rf /system/priv-app/Velvet/
   ;;
 esac
