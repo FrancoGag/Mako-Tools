@@ -7,6 +7,8 @@
 list_files() {
 cat <<EOF
 priv-app/com.asksven.betterbatterystats_xdaedition.apk
+addon.d/75-xposed.sh
+addon.d/99-franco.sh
 app/Toggle2G/Toggle2G.apk
 etc/hosts
 etc/init.d/01kernel
@@ -15,7 +17,7 @@ media/bootanimation.zip
 xbin/fixsdcard
 xbin/fstrimall
 xbin/maintenance
-xbin/mako-tools
+xbin/makotools
 xbin/sqlite3
 xbin/vacuum
 EOF
