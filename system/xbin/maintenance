@@ -3,12 +3,12 @@
 cd /storage/emulated/0
 #-----------------Limpieza------------------
 #Borrar Archivos Viejos
-find ./Pictures/Screenshots -mtime +30 -type f | xargs -0 rm -f
-find ./WhatsApp/Media -mtime +60 -type f | xargs -0 rm -f
+find ./Pictures/Screenshots -mtime +30 -type f | xargs rm -f
+find ./WhatsApp/Media -mtime +60 -type f | xargs rm -f
 rm -f ./WhatsApp/Profile\ Pictures/*.jpg
 rm -fr UnityAdsVideoCache
-find ./Download/Apps/ -type f -iname *google* | xargs -0 rm -f
-find ./Download/Apps/ -type f -iname *whatsapp* | xargs -0 rm -f
+find ./Download/Apps/ -type f -iname *google* | xargs rm -f
+find ./Download/Apps/ -type f -iname *whatsapp* | xargs rm -f
 
 MAKOTOOLS="./Download/Zips/Mako-Tools*"
 GAPPS="./Download/Zips/BaNkS-Dynamic-*"
