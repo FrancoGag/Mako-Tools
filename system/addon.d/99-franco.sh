@@ -36,7 +36,7 @@ case "$1" in
     done
   ;;
   pre-backup)
-    rm -f /addon.d/50-chroma.sh
+    # Stub
   ;;
   post-backup)
     # Stub
@@ -52,6 +52,5 @@ case "$1" in
     rm -rf /system/app/LockClock/
     rm -rf /system/priv-app/HotwordEnrollment/
     rm -rf /system/priv-app/Velvet/
-    rm -f /addon.d/50-chroma.sh
   ;;
 esac
