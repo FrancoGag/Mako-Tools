@@ -50,5 +50,6 @@ case "$1" in
    rm -rf /system/app/Stk/
    rm -rf /system/app/Calculator/
    rm -rf /system/priv-app/Velvet/
+   rm -rf /system/priv-app/HotwordEnrollment/
   ;;
 esac
