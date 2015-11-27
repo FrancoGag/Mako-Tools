@@ -1,7 +1,6 @@
 #!/sbin/sh
 #
 # Backkup xposed after a dirty flash
-# Script by /r/FG3
 #
 . /tmp/backuptool.functions
 
@@ -43,5 +42,6 @@ case "$1" in
     # Stub
   ;;
   post-restore)
+    # Stub
   ;;
 esac
