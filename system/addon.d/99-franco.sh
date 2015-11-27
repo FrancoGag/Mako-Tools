@@ -36,7 +36,7 @@ case "$1" in
     done
   ;;
   pre-backup)
-    # Stub
+    rm -f /addon.d/50-chroma.sh
   ;;
   post-backup)
     # Stub
@@ -45,11 +45,13 @@ case "$1" in
     # Stub
   ;;
   post-restore)
-   sed -i '/wifi.supplicant_scan_interval/c\wifi.supplicant_scan_interval=120' /system/build.prop
-   sed -i '/ro.config.vc_music_vol_steps/c\ro.config.vc_music_vol_steps=15' /system/build.prop
-   rm -rf /system/app/Stk/
-   rm -rf /system/app/Calculator/
-   rm -rf /system/priv-app/Velvet/
-   rm -rf /system/priv-app/HotwordEnrollment/
+    sed -i '/wifi.supplicant_scan_interval/c\wifi.supplicant_scan_interval=120' /system/build.prop
+    sed -i '/ro.config.vc_music_vol_steps/c\ro.config.vc_music_vol_steps=15' /system/build.prop
+    rm -rf /system/app/Stk/
+    rm -rf /system/app/Calculator/
+    rm -rf /system/app/LockClock/
+    rm -rf /system/priv-app/HotwordEnrollment/
+    rm -rf /system/priv-app/Velvet/
+    rm -f /addon.d/50-chroma.sh
   ;;
 esac
