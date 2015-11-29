@@ -42,6 +42,9 @@ case "$1" in
     # Stub
   ;;
   post-restore)
-    # Stub
+	chmod +x /systembin/app_process32_xposed
+	chmod +x /systembin/dex2oat
+	chmod +x /systembin/oatdump
+	chmod +x /systembin/patchoat
   ;;
 esac
