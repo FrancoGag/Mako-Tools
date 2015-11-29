@@ -65,4 +65,9 @@ if [ $NFILES != "0" ]; then
 	if [ "`echo ./Download/*.gif`" != "./Download/*.gif" ]; then
 		mv ./Download/*.gif ./Pictures/Downloaded\ Pictures
 	fi
+	
+	mkdir -p ./Movies
+	if [ "`echo ./Download/*.mp4`" != "./Download/*.mp4" ]; then
+		mv ./Download/*.mp4 ./Pictures/Downloaded\ Pictures
+	fi
 fi
