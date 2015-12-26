@@ -18,6 +18,7 @@ xbin/fstrimall
 xbin/maintenance
 xbin/makotools
 xbin/pingg
+xbin/pingw
 xbin/sqlite3
 xbin/vacuum
 EOF
