@@ -50,6 +50,7 @@ case "$1" in
     sed -i '/ro.config.vc_music_vol_steps/c\ro.config.vc_music_vol_steps=15' /system/build.prop
     rm -rf /system/app/Stk/
     rm -rf /system/app/Calculator/
+	rm -rf /system/app/ExactCalculator/
     rm -rf /system/app/LockClock/
     rm -rf /system/priv-app/HotwordEnrollment/
     rm -rf /system/priv-app/Velvet/

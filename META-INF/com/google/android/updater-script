@@ -33,7 +33,10 @@ ui_print("Done");
 ui_print("Deleting apps...");
 set_progress(0.6);
 delete_recursive("/system/app/Stk/");
+delete_recursive("/system/app/ExactCalculator/");
+delete_recursive("/system/app/LockClock/");
 delete_recursive("/system/app/Calculator/");
+
 ui_print("Done");
 
 
