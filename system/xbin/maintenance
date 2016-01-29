@@ -11,7 +11,7 @@ find ./Download/Apps/ -type f -iname *google* | xargs rm -f
 find ./Download/Apps/ -type f -iname *whatsapp* | xargs rm -f
 
 MAKOTOOLS="./Download/Zips/Mako-Tools*"
-GAPPS="./Download/Zips/BaNkS-Dynamic-*"
+GAPPS="./Download/Zips/open_gapps*"
 ROM="./Download/Zips/chroma_mako-*"
 KERNEL="./Download/Zips/hC-*"
 if [ "`echo $MAKOTOOLS`" != "$MAKOTOOLS" ]; then
