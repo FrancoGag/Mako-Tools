@@ -54,26 +54,26 @@ echo 1458000 1037500 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
 echo 1512000 1037500 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
 
 # CPU min
-echo 94500 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 94500 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-echo 94500 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-echo 94500 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+#echo 94500 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+#echo 94500 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+#echo 94500 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+#echo 94500 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
 
 # <<< Governor >>>
-echo 0 > /sys/devices/system/cpu/cpufreq/conservative/input_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/conservative/input_boost_duration
+#echo 0 > /sys/devices/system/cpu/cpufreq/conservative/input_boost_freq
+#echo 0 > /sys/devices/system/cpu/cpufreq/conservative/input_boost_duration
 
 # <<< Temperature throtle >>>
-echo 50 > /sys/module/msm_thermal/parameters/temp_max
+#echo 50 > /sys/module/msm_thermal/parameters/temp_max
 
 # <<< Vibrator Strength >>>
 #echo 70 > /sys/class/timed_output/vibrator/amp
 
 # <<< Disable wakelock >>>
-echo 0 > /sys/module/wakeup/parameters/enable_msm_hsic_ws
+#echo 0 > /sys/module/wakeup/parameters/enable_msm_hsic_ws
 
 # <<< DT2W >>>
-echo 1 > /sys/devices/virtual/input/lge_touch/dt_wake_enabled
-echo 1 > /sys/devices/virtual/input/lge_touch/dt_wake_pwr_disable
+#echo 1 > /sys/devices/virtual/input/lge_touch/dt_wake_enabled
+#echo 1 > /sys/devices/virtual/input/lge_touch/dt_wake_pwr_disable
 #echo 1 > /sys/devices/virtual/misc/touchwake/enabled
 #echo 10000 > /sys/devices/virtual/misc/touchwake/delay
